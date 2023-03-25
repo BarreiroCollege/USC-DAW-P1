@@ -29,7 +29,7 @@ $(document).ready(function () {
     });
 
     const airportsDatalist = $("#aeropuertos");
-    fetch("/static/airports.json")
+    fetch("/data/airports.json")
         .then(d => d.json())
         .then(d => {
             airportsDatalist.append(d.airports.map(airport => {
