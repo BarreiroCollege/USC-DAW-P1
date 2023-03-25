@@ -1,0 +1,4 @@
+.text-bg-tertiary {
+    color: #fff !important;
+    background-color: var(--bs-tertiary);
+}

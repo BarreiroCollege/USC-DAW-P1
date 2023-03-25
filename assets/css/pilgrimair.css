@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap');
-@import "common.css";
+@import "button.css";
 @import "navigation.css";
 @import "footer.css";
+@import "steps.css";
+@import "typography.css";
 
 :root {
     --bs-blue: #0d6efd;

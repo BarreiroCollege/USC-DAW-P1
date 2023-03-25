@@ -1,8 +1,3 @@
-.text-bg-tertiary {
-    color: #fff !important;
-    background-color: var(--bs-tertiary);
-}
-
 .btn-primary {
     --bs-btn-color: #fff;
     --bs-btn-bg: var(--bs-primary);

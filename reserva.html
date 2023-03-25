@@ -76,68 +76,85 @@
     <h1 class="display-6 fw-bold">Reserva tu vuelo con PilgrimAir</h1>
   </div>
 
-  <div class="mt-5 px-2 row justify-content-between" id="selector">
-    <div class="col-md-9">
-      <div class="row mb-3">
-        <div class="col-6">
-          <label for="origin-input" class="form-label">Origen</label>
-          <input type="text" class="form-control" id="origin-input" name="origen" list="aeropuertos-origen">
-        </div>
-        <div class="col-6">
-          <label for="destination-input" class="form-label">Destino</label>
-          <input type="text" class="form-control" id="destination-input" name="destino" list="aeropuertos-destino">
-        </div>
+  <div class="row">
+    <div class="col-12 col-md-9 order-md-2">
+      <div class="mt-5 px-2 row justify-content-between" id="selector">
+        <div class="col-md-9">
+          <div class="row mb-3">
+            <div class="col-6">
+              <label for="origin-input" class="form-label">Origen</label>
+              <input type="text" class="form-control" id="origin-input" name="origen" list="aeropuertos-origen">
+            </div>
+            <div class="col-6">
+              <label for="destination-input" class="form-label">Destino</label>
+              <input type="text" class="form-control" id="destination-input" name="destino" list="aeropuertos-destino">
+            </div>
 
-        <datalist id="aeropuertos-origen">
-        </datalist>
-        <datalist id="aeropuertos-destino">
-        </datalist>
-      </div>
+            <datalist id="aeropuertos-origen">
+            </datalist>
+            <datalist id="aeropuertos-destino">
+            </datalist>
+          </div>
 
-      <div class="row mb-3">
-        <div class="col-md-4">
-          <div class="row mb-1 justify-content-end">
-            <div class="col-3 col-md-12">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="tipo-billete" id="radio-ida" value="ida" checked>
-                <label class="form-check-label" for="radio-ida">Ida</label>
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <div class="row mb-1 justify-content-end">
+                <div class="col-3 col-md-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipo-billete" id="radio-ida" value="ida" checked>
+                    <label class="form-check-label" for="radio-ida">Ida</label>
+                  </div>
+                </div>
+                <div class="col-3 col-md-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipo-billete" id="radio-vuelta" value="vuelta">
+                    <label class="form-check-label" for="radio-vuelta">Ida y Vuelta</label>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-3 col-md-12">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="tipo-billete" id="radio-vuelta" value="vuelta">
-                <label class="form-check-label" for="radio-vuelta">Ida y Vuelta</label>
+
+            <div class="col-md-8" id="div-fecha-ida">
+              <label for="input-fecha-ida" class="form-label">Fecha</label>
+              <input type="date" class="form-control" id="input-fecha-ida" name="input-fecha-ida">
+            </div>
+            <div class="col-md-8 d-none" id="div-fecha-vuelta">
+              <label for="input-fecha-vuelta-1" class="form-label">Fechas</label>
+              <div class="row">
+                <div class="col-6">
+                  <input type="date" class="form-control" id="input-fecha-vuelta-1" name="input-fecha-vuelta-1">
+                </div>
+                <div class="col-6">
+                  <input type="date" class="form-control" id="input-fecha-vuelta-2" name="input-fecha-vuelta-2">
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-md-8" id="div-fecha-ida">
-          <label for="input-fecha-ida" class="form-label">Fecha</label>
-          <input type="date" class="form-control" id="input-fecha-ida" name="input-fecha-ida">
+        <div class="col-md-3 h-100 my-auto">
+          <button class="btn btn-primary btn-lg w-100" id="btn_continuar">Continuar</button>
         </div>
-        <div class="col-md-8 d-none" id="div-fecha-vuelta">
-          <label for="input-fecha-vuelta-1" class="form-label">Fechas</label>
-          <div class="row">
-            <div class="col-6">
-              <input type="date" class="form-control" id="input-fecha-vuelta-1" name="input-fecha-vuelta-1">
-            </div>
-            <div class="col-6">
-              <input type="date" class="form-control" id="input-fecha-vuelta-2" name="input-fecha-vuelta-2">
-            </div>
-          </div>
+      </div>
+
+      <div class="row justify-content-center mt-5" id="mapa">
+        <div class="col-12 col-md-10 col-xl-8">
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dyjzGiGN2NlXglUdcArcTaGpPxpHptg&ehbc=2E312F"
+                  width="100%" height="720"></iframe>
         </div>
       </div>
     </div>
-    <div class="col-md-3 h-100 my-auto">
-      <button class="btn btn-primary btn-lg w-100" id="btn_continuar">Continuar</button>
-    </div>
-  </div>
 
-  <div class="row justify-content-center mt-5" id="mapa">
-    <div class="col-12 col-md-10 col-xl-8">
-      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dyjzGiGN2NlXglUdcArcTaGpPxpHptg&ehbc=2E312F"
-              width="100%" height="720"></iframe>
+    <div class="col-12 col-md-3 order-md-1">
+      <nav class="stepbar">
+        <ul>
+          <li><a href="#" class="stepbar-step-active">Destino y Fecha</a></li>
+          <li><a class="stepbar-step-disabled">Datos de Viajeros</a></li>
+          <li><a class="stepbar-step-disabled">Seleccionar Paquete</a></li>
+          <li><a class="stepbar-step-disabled">Seleccionar Asientos</a></li>
+          <li><a class="stepbar-step-disabled">Añadir Extras</a></li>
+          <li><a class="stepbar-step-disabled">Completar Pago</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
 </main>

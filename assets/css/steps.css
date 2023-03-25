@@ -1,0 +1,68 @@
+.stepbar {
+    transform: translateY(-0%);
+}
+
+.stepbar ul {
+    padding-left: 50px;
+    position: relative;
+    list-style: none;
+}
+
+.stepbar ul::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: calc(100% - 50px);
+    left: 20px;
+    top: 0px;
+    background: var(--bs-secondary);
+    z-index: -1;
+    margin: 29px;
+}
+
+.stepbar ul li {
+    padding: 15px 0 15px 20px;
+}
+
+.stepbar ul li a {
+    text-decoration: none;
+    position: relative;
+    color: var(--bs-secondary);
+    font-size: 1.25rem;
+    line-height: 1rem;
+    font-weight: 500;
+}
+
+.stepbar ul li a:before {
+    content: '';
+    position: absolute;
+    background: var(--bs-secondary);
+    width: 18px;
+    height: 18px;
+    left: -29px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50px;
+    border: 4px solid var(--bs-secondary);
+}
+
+.stepbar ul li a.stepbar-step-active {
+    font-weight: 700;
+    color: var(--bs-primary);
+}
+
+.stepbar ul li a.stepbar-step-active::before {
+    border-color: var(--bs-primary);
+    background-color: var(--bs-primary);
+}
+
+.stepbar ul li a.stepbar-step-disabled {
+    color: var(--bs-gray);
+    cursor: not-allowed;
+}
+
+.stepbar ul li a.stepbar-step-disabled::before {
+    border-color: var(--bs-gray);
+    background-color: var(--bs-gray);
+    cursor: not-allowed;
+}
