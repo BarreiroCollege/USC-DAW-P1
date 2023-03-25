@@ -1,84 +1,257 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width"/>
-    <title>Reserva tus vuelos | PilgrimAir</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <title>Inicio | PilgrimAir</title>
+
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 
-<header>
-    <span>Inicio</span>
-    <a href="mis_reservas.html">Mis Reservas</a>
-    <a href="acceso.html">Acceso</a>
+<header class="custom-header">
+  <div class="px-3 py-2 text-bg-tertiary">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <img class="bi me-2 img-header" role="img" src="/assets/img/logo.png" alt="PilgrimAir"/>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <li>
+            <a href="/inicio.html" class="nav-link">
+              <i class="bi bi-globe-europe-africa d-block mx-auto mb-1 icon-header"></i>
+              <span class="icon-text-header">Reservar Vuelos</span>
+            </a>
+          </li>
+          <li>
+            <a href="/reserva.html" class="nav-link">
+              <i class="bi bi-tags-fill d-block mx-auto mb-1 icon-header"></i>
+              <span class="icon-text-header">Reservar Vuelos</span>
+            </a>
+          </li>
+          <li>
+            <a href="/check_in.html" class="nav-link">
+              <i class="bi bi-ticket-detailed-fill d-block mx-auto mb-1 icon-header"></i>
+              <span class="icon-text-header">CheckIn Online</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </header>
 
-<nav>
-    <ul>
-        <li>
-            <a href="reserva.html">Reservar Vuelos</a>
-            <ul>
-                <li>
-                    <a href="datos.html">Datos Viajeros</a>
-                </li>
-                <li>
-                    <a href="paquete.html">Seleccionar Paquete</a>
-                </li>
-                <li>
-                    <a href="asientos.html">Seleccionar Asientos</a>
-                </li>
-                <li>
-                    <a href="extras.html">Añadir Extras</a>
-                </li>
-                <li>
-                    <a href="pago.html">Completar Pago</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="planes.html">Comparar Planes</a>
-        </li>
-        <li>
-            <a href="check_in.html">Check-In Online</a>
-        </li>
-    </ul>
+<nav class="navbar navbar-expand-lg bg-light custom-navbar">
+  <div class="container-fluid">
+    <button class="navbar-toggler m-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Abrir Navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <div class="col-lg-auto mb-2 mb-lg-0 me-lg-auto"></div>
+        <div class="text-end" id="nav_reservas">
+          <a class="btn btn-primary" role="button" href="/mis_reservas.html">Mis Reservas</a>
+        </div>
+
+        <div class="text-end" id="nav_acceso">
+          <a class="btn btn-light text-dark me-2" role="button" href="/acceso.html">Iniciar Sesión</a>
+          <a class="btn btn-secondary" role="button" href="/acceso.html?registro">Registrarse</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
 
-<section>
-    <h1 id="title">¡Bienvenido a PilgrimAir!</h1>
-    <p id="subtitle">La aerolínea gallega por excelencia para volar barato.</p>
-</section>
+<main id="contenido" class="container">
+  <div class="px-4 pt-1 mt-2 mb-5 text-center border-bottom" id="titulo">
+    <h1 class="display-4 fw-bold">¡Bienvenido a PilgrimAir!</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">La aerolínea gallega por excelencia para volar barato.</p>
+    </div>
+  </div>
 
-<section>
-    <p id="welcome"></p>
-</section>
+  <div class="px-2 row gy-5 justify-content-between mb-5" id="contenido_principal">
+    <div class="col-12 col-lg-8">
+      <div class="row mb-5">
+        <div class="row mb-3">
+          <div class="col-6">
+            <label for="origin-input" class="form-label">Origen</label>
+            <input type="text" class="form-control" id="origin-input" name="origen" list="aeropuertos">
+          </div>
+          <div class="col-6">
+            <label for="destination-input" class="form-label">Destino</label>
+            <input type="text" class="form-control" id="destination-input" name="destino" list="aeropuertos">
+          </div>
 
-<section>
-    <p id="last_routes"></p>
-</section>
+          <datalist id="aeropuertos">
+          </datalist>
+        </div>
 
-<aside id="offers">
-    <p></p>
-</aside>
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <div class="row mb-1 justify-content-end">
+              <div class="col-3 col-md-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="tipo-billete" id="radio-ida" value="ida" checked>
+                  <label class="form-check-label" for="radio-ida">Ida</label>
+                </div>
+              </div>
+              <div class="col-3 col-md-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="tipo-billete" id="radio-vuelta" value="vuelta">
+                  <label class="form-check-label" for="radio-vuelta">Ida y Vuelta</label>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<footer>
-    <dl>
-        <dt>
-            <a href="empresa.html">Quienes Somos</a>
-        </dt>
-        <dd>
-            <a href="rutas.html">Nuestras Rutas</a>
-        </dd>
-        <dd>
-            <a href="flota.html">Nuestra Flota</a>
-        </dd>
-        <dd>
-            <a href="trabajo.html">Posiciones Abiertas</a>
-        </dd>
-    </dl>
-</footer>
+          <div class="col-md-8" id="div-fecha-ida">
+            <label for="input-fecha-ida" class="form-label">Fecha</label>
+            <input type="date" class="form-control" id="input-fecha-ida" name="input-fecha-ida">
+          </div>
+          <div class="col-md-8 d-none" id="div-fecha-vuelta">
+            <label for="input-fecha-vuelta-1" class="form-label">Fechas</label>
+            <div class="row">
+              <div class="col-6">
+                <input type="date" class="form-control" id="input-fecha-vuelta-1" name="input-fecha-vuelta-1">
+              </div>
+              <div class="col-6">
+                <input type="date" class="form-control" id="input-fecha-vuelta-2" name="input-fecha-vuelta-2">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary w-100" id="btn_buscar">Buscar Vuelos</button>
+      </div>
+
+      <div class="row mt-4">
+        <h4>Rutas Más Populares</h4>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1RWwC6ckW_W6IycALaS6feKEFG_TfzgA&ehbc=2E312F" width="640" height="480"></iframe>
+      </div>
+    </div>
+
+    <div class="d-none d-lg-block col-lg-3">
+      <div id="vertical-banner" class="carousel slide z-n1" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/150x400.png?text=Oferta 1" class="d-block w-100" alt="Oferta 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/150x400.png?text=Oferta 2" class="d-block w-100" alt="Oferta 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/150x400.png?text=Oferta+3" class="d-block w-100" alt="Oferta 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#vertical-banner" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#vertical-banner" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row border-top mt-3 pt-3" id="planes">
+    <h3>Compara los Planes</h3>
+    <div class="col-md-6">
+      <div class="card mb-4 box-shadow bg-light border-secondary">
+        <div class="card-header bg-secondary text-white">
+          <h4 class="my-0 fw-normal">Plan Básico</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">Gratis</h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Tarifas Regulares</li>
+            <li>Sin Maletas Gratis</li>
+            <li>Sin Descuentos</li>
+            <li>Sin Sorteos</li>
+          </ul>
+          <a role="button" class="w-100 btn btn-lg btn-outline-primary" href="/acceso.html?registro">Regístrate ya</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-4 box-shadow bg-warning border-secondary">
+        <div class="card-header bg-primary text-white">
+          <h4 class="my-0 fw-normal">Plan Peregrino</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">49,99 € <small class="text-muted">/ año</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Acceso a Tarifa Prioritaria</li>
+            <li>1 maleta gratis en cabina</li>
+            <li>10€ de descuento en maletas facturadas</li>
+            <li>Entras en Sorteos Mensuales</li>
+          </ul>
+          <a role="button" class="w-100 btn btn-lg btn-secondary" href="/planes.html">Ver Más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="container">
+  <footer class="py-5">
+    <div class="row g-5">
+      <div class="col-12 col-md-8 mb-3">
+        <div class="row">
+          <div class="col-6 mb-3">
+            <h5>La Aerolínea</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="/rutas.html" class="nav-link p-0 text-muted">Nuestras Rutas</a></li>
+              <li class="nav-item mb-2"><a href="/flota.html" class="nav-link p-0 text-muted">Nuestra Flota</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 mb-3">
+            <h5>La Empresa</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="/empresa.html" class="nav-link p-0 text-muted">Quienes Somos</a></li>
+              <li class="nav-item mb-2"><a href="/trabajo.html" class="nav-link p-0 text-muted">Posiciones Abiertas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <form>
+          <h5>Suscríbete a nuestra lista de correo</h5>
+          <p>Recibe un correo cada mes con las novedades y ofertas disponibles para tí.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label class="visually-hidden" for="txt_newsletter_email">Dirección de Email</label>
+            <input id="txt_newsletter_email" type="text" class="form-control" placeholder="Dirección de Email">
+            <button class="btn btn-primary" type="button" id="btn_newsletter">Suscribirse</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>PilgrimAir &copy; 2023. Todos los derechos reservados.</p>
+      <ul class="list-unstyled d-flex">
+        <img class="img-fluid logo-footer" src="/assets/img/icon-192.png"/>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="/assets/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/js/pilgrimair.js" type="text/javascript"></script>
+<script src="/assets/js/pages/inicio.js" type="text/javascript"></script>
 
 </body>
 </html>

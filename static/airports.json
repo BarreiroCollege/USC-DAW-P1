@@ -1,0 +1,33 @@
+{
+  "airports": [
+    "Santiago de Compostela",
+    "Vigo",
+    "A Coruña",
+    "Madrid",
+    "Frankfurt",
+    "Londres",
+    "Bruselas",
+    "Boston",
+    "Nueva York"
+  ],
+  "routes": {
+    "Santiago de Compostela": [
+      "Madrid",
+      "Frankfurt",
+      "Londres",
+      "Bruselas",
+      "Boston",
+      "Nueva York"
+    ],
+    "Vigo": [
+      "Madrid",
+      "Londres",
+      "Bruselas"
+    ],
+    "A Coruña": [
+      "Madrid",
+      "Frankfurt",
+      "Londres"
+    ]
+  }
+}
