@@ -57,5 +57,10 @@ $(() => {
                 input.removeClass('is-invalid');
             }
         });
+
+        $("#btn_logout").on('click', () => {
+            localStorage.removeItem(LOCALSTORAGE_SESSION_KEY);
+            window.location.reload();
+        });
     });
 });
