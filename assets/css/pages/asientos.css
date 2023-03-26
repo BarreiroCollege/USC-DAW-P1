@@ -1,0 +1,94 @@
+@import "../components/steps.css";
+
+.avion {
+    margin: 20px auto;
+    max-width: 300px;
+    background: white;
+}
+
+.salida {
+    position: relative;
+    height: 50px;
+}
+
+.salida:before, .salida:after {
+    content: "SALIDA";
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 2px 2px 2px;
+    display: block;
+    position: absolute;
+    background: var(--bs-red);
+    color: white;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 5px;
+}
+
+.salida:before {
+    left: 10px;
+}
+
+.salida:after {
+    right: 10px;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.asientos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.asiento {
+    display: flex;
+    flex: 0 0 14.28%;
+    padding: 5px;
+    position: relative;
+}
+
+.asiento label {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 1.5rem;
+    padding: 4px 0;
+    background: var(--bs-secondary);
+    border-radius: 5px;
+    color: black;
+}
+
+.asiento label:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 2px var(--bs-tertiary);
+}
+
+.asiento:nth-child(3) {
+    margin-right: 14%;
+}
+
+.asiento input[type=checkbox] {
+    position: absolute;
+}
+
+.asiento input[type=checkbox]:checked + label {
+    background: var(--bs-primary);
+}
+
+.asiento input[type=checkbox]:disabled + label {
+    background: var(--bs-gray);
+}
+
+.asiento input[type=checkbox]:disabled + label:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+}

@@ -34,3 +34,7 @@
     --bs-font-monospace: "Roboto Mono", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
+
+* {
+    box-sizing: border-box;
+}

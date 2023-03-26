@@ -1,78 +1,458 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width"/>
-    <title>Seleccionar Asientos | Tu Vuelo | PilgrimAir</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <title>Asientos | PilgrimAir</title>
+
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/pilgrimair.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/pages/asientos.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 
-<header>
-    <a href="inicio.html">Inicio</a>
-    <a href="mis_reservas.html">Mis Reservas</a>
-    <a href="acceso.html">Acceso</a>
+<header class="custom-header">
+  <div class="px-3 py-2 text-bg-tertiary">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <img class="bi me-2 img-header" role="img" src="/assets/img/logo.png" alt="PilgrimAir"/>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <li>
+            <a class="nav-link nav-link-active">
+              <i class="bi bi-globe-europe-africa d-block mx-auto mb-1 icon-header"></i>
+              <span class="icon-text-header">Reservar Vuelos</span>
+            </a>
+          </li>
+          <li>
+            <a href="/planes.html" class="nav-link">
+              <i class="bi bi-tags-fill d-block mx-auto mb-1 icon-header"></i>
+              <span class="icon-text-header">Comparar Planes</span>
+            </a>
+          </li>
+          <li>
+            <a href="/check_in.html" class="nav-link">
+              <i class="bi bi-ticket-detailed-fill d-block mx-auto mb-1 icon-header"></i>
+              <span class="icon-text-header">CheckIn Online</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </header>
 
-<nav>
-    <ul>
-        <li>
-            <a href="reserva.html">Reservar Vuelos</a>
-            <ul>
-                <li>
-                    <a href="datos.html">Datos Viajeros</a>
-                </li>
-                <li>
-                    <a href="paquete.html">Seleccionar Paquete</a>
-                </li>
-                <li>
-                    <span>Seleccionar Asientos</span>
-                </li>
-                <li>
-                    <a href="extras.html">Añadir Extras</a>
-                </li>
-                <li>
-                    <a href="pago.html">Completar Pago</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="planes.html">Comparar Planes</a>
-        </li>
-        <li>
-            <a href="check_in.html">Check-In Online</a>
-        </li>
-    </ul>
+<nav class="navbar navbar-expand-lg bg-light custom-navbar">
+  <div class="container-fluid">
+    <button class="navbar-toggler m-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Abrir Navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <div class="col-lg-auto mb-2 mb-lg-0 me-lg-auto"></div>
+        <div class="text-end" id="nav_reservas">
+          <a class="btn btn-primary" role="button" href="/mis_reservas.html">Mis Reservas</a>
+          <button class="btn btn-light text-dark me-2" type="button" id="btn_logout">Cerrar Sesión</button>
+        </div>
+
+        <div class="text-end" id="nav_acceso">
+          <a class="btn btn-light text-dark me-2" role="button" href="/acceso.html">Iniciar Sesión</a>
+          <a class="btn btn-secondary" role="button" href="/acceso.html?registro">Registrarse</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
 
-<section>
-    <h1>Selecciona tus asientos</h1>
-</section>
+<main id="contenido" class="container">
+  <div class="px-4 pt-1 mt-2 mb-5 text-center border-bottom" id="titulo">
+    <h1 class="display-6 fw-bold" id="texto_titulo">Reserva tu vuelo con PilgrimAir</h1>
+  </div>
 
-<section id="tabla_js">
+  <div class="row">
+    <div class="col-12 col-md-9 order-md-2">
+      <div class="row">
+        <div class="col-12 col-lg-6 order-2 order-lg-1">
+          <div class="avion">
+            <div class="salida"></div>
+            <ol>
+              <li>
+                <ol class="asientos">
+                  <li class="asiento">
+                    <input type="checkbox" id="1A" disabled />
+                    <label for="1A">1A</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="1B" />
+                    <label for="1B">1B</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="1C" />
+                    <label for="1C">1C</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="1D" disabled/>
+                    <label for="1D">1D</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="1E" />
+                    <label for="1E">1E</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="1F" />
+                    <label for="1F">1F</label>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <ol class="asientos">
+                  <li class="asiento">
+                    <input type="checkbox" id="2A" disabled/>
+                    <label for="2A">2A</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="2B" disabled/>
+                    <label for="2B">2B</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="2C" />
+                    <label for="2C">2C</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="2D" disabled/>
+                    <label for="2D">2D</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="2E" />
+                    <label for="2E">2E</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="2F" />
+                    <label for="2F">2F</label>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <ol class="asientos">
+                  <li class="asiento">
+                    <input type="checkbox" id="3A" />
+                    <label for="3A">3A</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="3B" />
+                    <label for="3B">3B</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="3C" disabled/>
+                    <label for="3C">3C</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="3D" />
+                    <label for="3D">3D</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="3E" />
+                    <label for="3E">3E</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="3F" disabled/>
+                    <label for="3F">3F</label>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <ol class="asientos">
+                  <li class="asiento">
+                    <input type="checkbox" id="4A" />
+                    <label for="4A">4A</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="4B" />
+                    <label for="4B">4B</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="4C" disabled/>
+                    <label for="4C">4C</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="4D" />
+                    <label for="4D">4D</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="4E" />
+                    <label for="4E">4E</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="4F" />
+                    <label for="4F">4F</label>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <ol class="asientos">
+                  <li class="asiento">
+                    <input type="checkbox" id="5A" />
+                    <label for="5A">5A</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="5B" />
+                    <label for="5B">5B</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="5C" />
+                    <label for="5C">5C</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="5D" />
+                    <label for="5D">5D</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="5E" />
+                    <label for="5E">5E</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="5F" />
+                    <label for="5F">5F</label>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <ol class="asientos">
+                  <li class="asiento">
+                    <input type="checkbox" id="6A" />
+                    <label for="6A">6A</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="6B" />
+                    <label for="6B">6B</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="6C" />
+                    <label for="6C">6C</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="6D" />
+                    <label for="6D">6D</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="6E" />
+                    <label for="6E">6E</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="6F" />
+                    <label for="6F">6F</label>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <ol class="asientos">
+                  <li class="asiento">
+                    <input type="checkbox" id="7A" disabled/>
+                    <label for="7A">7A</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="7B" />
+                    <label for="7B">7B</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="7C" />
+                    <label for="7C">7C</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="7D" />
+                    <label for="7D">7D</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="7E" />
+                    <label for="7E">7E</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="7F" />
+                    <label for="7F">7F</label>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <ol class="asientos">
+                  <li class="asiento">
+                    <input type="checkbox" id="8A" />
+                    <label for="8A">8A</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="8B" />
+                    <label for="8B">8B</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="8C" />
+                    <label for="8C">8C</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="8D" />
+                    <label for="8D">8D</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="8E" />
+                    <label for="8E">8E</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="8F" />
+                    <label for="8F">8F</label>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <ol class="asientos">
+                  <li class="asiento">
+                    <input type="checkbox" id="9A" />
+                    <label for="9A">9A</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="9B" />
+                    <label for="9B">9B</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="9C" />
+                    <label for="9C">9C</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="9D" />
+                    <label for="9D">9D</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="9E" />
+                    <label for="9E">9E</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="9F" />
+                    <label for="9F">9F</label>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <ol class="asientos">
+                  <li class="asiento">
+                    <input type="checkbox" id="10A" />
+                    <label for="10A">10A</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="10B" />
+                    <label for="10B">10B</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="10C" />
+                    <label for="10C">10C</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="10D" />
+                    <label for="10D">10D</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="10E" />
+                    <label for="10E">10E</label>
+                  </li>
+                  <li class="asiento">
+                    <input type="checkbox" id="10F" />
+                    <label for="10F">10F</label>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <div class="salida"></div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 order-1 order-lg-2">
+          <div class="row">
+            <table class="table">
+              <thead>
+              <tr>
+                <th scope="col">Pasajero</th>
+                <th scope="col">Asiento</th>
+              </tr>
+              </thead>
+              <tbody id="table_body">
+              </tbody>
+            </table>
+          </div>
+          <div class="row mt-3">
+            <button class="btn btn-primary btn-lg w-100" id="btn_continuar" type="button">Continuar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</section>
+    <div class="col-12 col-md-3 order-md-1">
+      <nav class="stepbar">
+        <ul>
+          <li><a href="/reserva.html">Destino y Fecha</a></li>
+          <li><a href="/datos.html">Datos de Viajeros</a></li>
+          <li><a href="/paquete.html">Seleccionar Paquete</a></li>
+          <li><a href="#" class="stepbar-step-active">Seleccionar Asientos</a></li>
+          <li><a class="stepbar-step-disabled">Añadir Extras</a></li>
+          <li><a class="stepbar-step-disabled">Completar Pago</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</main>
 
-<section id="back">
-    <p>Estás viajando con el paquete X. Puedes cambiarlo <a href="paquete.html">aquí</a>.</p>
-</section>
+<div class="container">
+  <footer class="py-5">
+    <div class="row g-5">
+      <div class="col-12 col-md-8 mb-3">
+        <div class="row">
+          <div class="col-6 mb-3">
+            <h5>La Aerolínea</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="/rutas.html" class="nav-link p-0 text-muted">Nuestras Rutas</a></li>
+              <li class="nav-item mb-2"><a href="/flota.html" class="nav-link p-0 text-muted">Nuestra Flota</a></li>
+            </ul>
+          </div>
 
-<footer>
-    <dl>
-        <dt>
-            <a href="empresa.html">Quienes Somos</a>
-        </dt>
-        <dd>
-            <a href="rutas.html">Nuestras Rutas</a>
-        </dd>
-        <dd>
-            <a href="flota.html">Nuestra Flota</a>
-        </dd>
-        <dd>
-            <a href="trabajo.html">Posiciones Abiertas</a>
-        </dd>
-    </dl>
-</footer>
+          <div class="col-6 mb-3">
+            <h5>La Empresa</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="/empresa.html" class="nav-link p-0 text-muted">Quienes Somos</a></li>
+              <li class="nav-item mb-2"><a href="/trabajo.html" class="nav-link p-0 text-muted">Posiciones Abiertas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <form>
+          <h5>Suscríbete a nuestra lista de correo</h5>
+          <p>Recibe un correo cada mes con las novedades y ofertas disponibles para tí.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label class="visually-hidden" for="txt_newsletter_email">Dirección de Email</label>
+            <input id="txt_newsletter_email" type="text" class="form-control" placeholder="Dirección de Email">
+            <button class="btn btn-primary" type="button" id="btn_newsletter">Suscribirse</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>PilgrimAir &copy; 2023. Todos los derechos reservados.</p>
+      <ul class="list-unstyled d-flex">
+        <img class="img-fluid logo-footer" src="/assets/img/icon-192.png"/>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="/assets/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/js/pilgrimair.js" type="text/javascript"></script>
+<script src="/assets/js/pages/asientos.js" type="text/javascript"></script>
 
 </body>
 </html>
