@@ -12,24 +12,24 @@
     content: '';
     position: absolute;
     width: 3px;
-    height: calc(100% - 50px);
+    height: calc(100% - 40px);
     left: 20px;
-    top: 0px;
+    top: -8px;
     background: var(--bs-secondary);
     z-index: -1;
     margin: 29px;
 }
 
 .stepbar ul li {
-    padding: 15px 0 15px 20px;
+    padding: 10px 0 10px 20px;
 }
 
 .stepbar ul li a {
     text-decoration: none;
     position: relative;
     color: var(--bs-secondary);
-    font-size: 1.25rem;
-    line-height: 1rem;
+    font-size: 1rem;
+    line-height: 0.75rem;
     font-weight: 500;
 }
 
