@@ -56,22 +56,6 @@ const registrarSelector = async () => {
         inputFechaVuelta1.attr('max', e.target.value);
     });
 
-    const SESSIONSTORAGE_DATOSVUELO_KEY = "PA_DATOSVUELO";
-    const possibleFlight = sessionStorage.getItem(SESSIONSTORAGE_DATOSVUELO_KEY);
-    if (possibleFlight !== null) {
-        const data = JSON.parse(possibleFlight);
-        inputOrigen.val(data.origen);
-        inputDestino.val(data.destino);
-        if (data.fechas.length === 1) {
-            inputFechaIda.val(data.fechas[0]);
-        } else {
-            $("#radio-vuelta").click();
-            inputFechaVuelta1.val(data.fechas[0]);
-            inputFechaVuelta2.val(data.fechas[1]);
-        }
-        sessionStorage.removeItem(SESSIONSTORAGE_DATOSVUELO_KEY);
-    }
-
     const {airports, routes} = await obtenerAeropuertosYRutas();
 
     airportsDatalist.append(airports.map(airport => {
