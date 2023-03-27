@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<positions>
+    <position>
+        <title>Piloto de avión comercial</title>
+        <category>Vuelo</category>
+        <location>bos</location>
+        <description>Buscamos pilotos de avión comercial con experiencia para unirse a nuestro equipo en bos. La
+            posición requiere habilidades de liderazgo, excelentes habilidades de comunicación y la capacidad de
+            trabajar en equipo. Ofrecemos un paquete de compensación competitivo y excelentes oportunidades de
+            crecimiento profesional.
+        </description>
+    </position>
+    <position>
+        <title>Asistente de vuelo</title>
+        <category>Vuelo</category>
+        <location>scq</location>
+        <description>Buscamos asistentes de vuelo dinámicos y amigables para unirse a nuestro equipo en Santiago de
+            Compostela. Los candidatos deben tener experiencia previa en servicio al cliente y habilidades excepcionales
+            de resolución de problemas. Ofrecemos un ambiente de trabajo estimulante y oportunidades de crecimiento
+            profesional.
+        </description>
+    </position>
+    <position>
+        <title>Ingeniero de mantenimiento de aeronaves</title>
+        <category>Ingeniería</category>
+        <location>lcg</location>
+        <description>Estamos buscando un ingeniero de mantenimiento de aeronaves altamente motivado para unirse a
+            nuestro equipo en lcg. Los candidatos deben tener experiencia en mantenimiento y reparación de
+            aeronaves, y estar dispuestos a trabajar en horarios flexibles. Ofrecemos un salario competitivo y
+            beneficios excepcionales.
+        </description>
+    </position>
+    <position>
+        <title>Analista de seguridad cibernética</title>
+        <category>Ingeniería</category>
+        <location>bos</location>
+        <description>Estamos buscando un analista de seguridad cibernética con experiencia para unirse a nuestro equipo
+            en bos. Los candidatos deben tener un sólido conocimiento de los principios de seguridad de la
+            información y estar al tanto de las últimas tendencias en seguridad cibernética. Ofrecemos un ambiente de
+            trabajo desafiante y oportunidades de crecimiento profesional.
+        </description>
+    </position>
+    <position>
+        <title>Gerente de recursos humanos</title>
+        <category>Recursos Humanos</category>
+        <location>scq</location>
+        <description>Estamos buscando un gerente de recursos humanos altamente motivado y enfocado en los resultados
+            para unirse a nuestro equipo en scq. Los candidatos deben tener experiencia en
+            reclutamiento, retención y desarrollo de talentos. Ofrecemos un paquete de compensación competitivo y
+            beneficios excepcionales.
+        </description>
+    </position>
+    <position>
+        <title>Agente de servicio al cliente</title>
+        <category>Servicio al Cliente</category>
+        <location>lcg</location>
+        <description>Estamos buscando un agente de servicio al cliente amigable y eficiente para unirse a nuestro equipo
+            en lcg. Los candidatos deben tener habilidades excepcionales de comunicación y una actitud orientada al
+            cliente. Ofrecemos un ambiente de trabajo positivo y oportunidades de crecimiento profesional.
+        </description>
+    </position>
+    <position>
+        <title>Analista de datos</title>
+        <category>Ingeniería</category>
+        <location>bos</location>
+        <description>Estamos buscando un analista de datos altamente motivado y apasionado por los números para unirse a
+            nuestro equipo en bos. Los candidatos deben tener habilidades excepcionales de análisis y estar
+            familiarizados con herramientas de análisis de datos como Excel, Tableau y Python. Ofrecemos un ambiente de
+            trabajo dinámico y oportunidades de crecimiento profesional.
+        </description>
+    </position>
+    <position>
+        <title>Desarrollador de software</title>
+        <category>Ingeniería</category>
+        <location>scq</location>
+        <description>Buscamos un desarrollador de software altamente motivado y apasionado por la programación para
+            unirse a nuestro equipo en scq. Los candidatos deben tener experiencia en desarrollo de
+            software y estar familiarizados con lenguajes de programación como Java, Python y JavaScript. Ofrecemos un
+            ambiente de trabajo desafiante y oportunidades de crecimiento profesional.
+        </description>
+    </position>
+</positions>
