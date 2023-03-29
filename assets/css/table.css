@@ -1,0 +1,7 @@
+.bg-tertiary {
+    background-color: var(--bs-tertiary);
+}
+
+.border-tertiary {
+    border-color: var(--bs-tertiary);
+}
