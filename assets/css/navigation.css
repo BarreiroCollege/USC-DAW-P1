@@ -7,7 +7,7 @@
     text-align: center;
 }
 
-.nav-link {
+.nav-link:not(.nav-link-tab) {
     color: #ffffff;
 }
 
