@@ -1,7 +1,7 @@
 $(() => {
     let prevTopBreakpoint = 0;
 
-    $(window).on('scroll', () => {
+    window.addEventListener('scroll', () => {
         const width = $(window).width();
 
         const topBreakpoint = width < 576

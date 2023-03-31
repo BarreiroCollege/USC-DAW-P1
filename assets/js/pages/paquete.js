@@ -8,12 +8,14 @@ $(document).ready(() => {
     }
     const datosVuelo = JSON.parse(posiblesDatos);
 
-    $("#btn_basica").on('click', () => {
+    const btnBasica = document.querySelector("#btn_basica");
+    btnBasica.addEventListener('click', () => {
         sessionStorage.setItem(SESSIONSTORAGE_DATOSPAQUETE_KEY, "BASICA");
         window.location.href = "/asientos.html";
     });
 
-    $("#btn_peregrina").on('click', () => {
+    const btnPeregrina = document.querySelectorAll("#btn_peregrina")[0];
+    btnPeregrina.addEventListener('click', () => {
         sessionStorage.setItem(SESSIONSTORAGE_DATOSPAQUETE_KEY, "PEREGRINA");
         window.location.href = "/asientos.html";
     });
