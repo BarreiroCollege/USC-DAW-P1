@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(() => {
     let positions = [];
     const localizaciones = {
         "scq": "Santiago de Compostela",
@@ -46,7 +46,7 @@ $(document).ready(function () {
 
     const x = new XMLHttpRequest();
     x.open("GET", "/data/openings.xml", true);
-    x.onreadystatechange = function () {
+    x.onreadystatechange = () => {
         if (x.readyState === 4 && x.status === 200) {
             [...x.responseXML.getElementsByTagName("position")].forEach(p => positions.push(p));
             [...x.responseXML.getElementsByTagName("category")].forEach(tag => {

@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(() => {
     window.registrarSelector()
         .then(() => console.log("Selector Activado"));
 
