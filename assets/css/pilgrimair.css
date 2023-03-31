@@ -23,7 +23,9 @@
     --bs-gray-dark: #343a40;
 
     --bs-primary: #FFC107;
+    --bs-primary-rgb: 255, 193, 7;
     --bs-secondary: #03A9F4;
+    --bs-secondary-rgb: 3, 169, 244;
     --bs-tertiary: #073590;
 
     --bs-success: #4bb109;
