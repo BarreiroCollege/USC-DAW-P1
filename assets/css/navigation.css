@@ -16,7 +16,7 @@
 }
 
 .nav-link-active {
-    color: var(--bs-primary);
+    color: var(--bs-primary) !important;
     cursor: not-allowed;
 }
 
