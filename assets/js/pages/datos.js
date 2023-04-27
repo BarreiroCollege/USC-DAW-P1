@@ -3,7 +3,7 @@ $(document).ready(() => {
     const SESSIONSTORAGE_DATOSPASAJEROS_KEY = "PA_DATOSPASAJEROS";
     const posiblesDatos = sessionStorage.getItem(SESSIONSTORAGE_DATOSVUELO_KEY);
     if (posiblesDatos === null) {
-        window.location.replace("/reserva.html");
+        window.location.replace("reserva.html");
     }
     const datosVuelo = JSON.parse(posiblesDatos);
 
@@ -130,7 +130,7 @@ $(document).ready(() => {
         }
 
         sessionStorage.setItem(SESSIONSTORAGE_DATOSPASAJEROS_KEY, JSON.stringify(pasajeros));
-        window.location.href = "/paquete.html";
+        window.location.href = "paquete.html";
     });
 
     const possibleDatos = sessionStorage.getItem(SESSIONSTORAGE_DATOSPASAJEROS_KEY);

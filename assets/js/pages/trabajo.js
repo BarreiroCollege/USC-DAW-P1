@@ -45,7 +45,7 @@ $(document).ready(() => {
     $("#ubicacion").on('change', () => actualizarPosiciones());
 
     const x = new XMLHttpRequest();
-    x.open("GET", "/data/openings.xml", true);
+    x.open("GET", "data/openings.xml", true);
     x.onreadystatechange = () => {
         if (x.readyState === 4 && x.status === 200) {
             [...x.responseXML.getElementsByTagName("position")].forEach(p => positions.push(p));

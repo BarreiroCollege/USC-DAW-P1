@@ -27,7 +27,7 @@ $(document).ready(() => {
         window.obtenerValor()
             .then(v => {
                 sessionStorage.setItem(SESSIONSTORAGE_DATOSVUELO_KEY, JSON.stringify(v));
-                window.location.href = "/datos.html";
+                window.location.href = "datos.html";
             });
     });
 });

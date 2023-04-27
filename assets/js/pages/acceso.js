@@ -1,7 +1,7 @@
 $(document).ready(() => {
     const LOCALSTORAGE_SESSION_KEY = "PA_TOKEN";
     if (localStorage.getItem(LOCALSTORAGE_SESSION_KEY) !== null) {
-        window.location.replace("/mis_reservas.html");
+        window.location.replace("mis_reservas.html");
     }
 
     const modalElement = document.getElementById('modal-registro');
@@ -20,6 +20,6 @@ $(document).ready(() => {
         e.preventDefault();
 
         localStorage.setItem(LOCALSTORAGE_SESSION_KEY, "1");
-        window.location.href = "/mis_reservas.html";
+        window.location.href = "mis_reservas.html";
     });
 });

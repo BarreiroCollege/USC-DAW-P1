@@ -4,7 +4,7 @@ $(document).ready(() => {
     const SESSIONSTORAGE_DATOSEXTRAS_KEY = "PA_DATOSEXTRAS";
     const posiblesDatos = sessionStorage.getItem(SESSIONSTORAGE_DATOSVUELO_KEY);
     if (sessionStorage.getItem(SESSIONSTORAGE_DATOSASIENTOS_KEY) === null) {
-        window.location.replace("/datos.html");
+        window.location.replace("datos.html");
     }
     const datosVuelo = JSON.parse(posiblesDatos);
 
@@ -30,7 +30,7 @@ $(document).ready(() => {
             vip,
             fastTrack,
         }));
-        window.location.href = "/pago.html";
+        window.location.href = "pago.html";
     });
 
     if (sessionStorage.getItem(SESSIONSTORAGE_DATOSEXTRAS_KEY) !== null) {

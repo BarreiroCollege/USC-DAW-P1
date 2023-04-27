@@ -6,7 +6,7 @@ $(document).ready(() => {
     const posiblesDatos = sessionStorage.getItem(SESSIONSTORAGE_DATOSVUELO_KEY);
     const posiblesPasajeros = sessionStorage.getItem(SESSIONSTORAGE_DATOSPASAJEROS_KEY);
     if (sessionStorage.getItem(SESSIONSTORAGE_DATOSPAQUETE_KEY) === null) {
-        window.location.replace("/datos.html");
+        window.location.replace("datos.html");
     }
     const datosVuelo = JSON.parse(posiblesDatos);
     const datosPasajeros = JSON.parse(posiblesPasajeros);
@@ -48,7 +48,7 @@ $(document).ready(() => {
         const pasajeroIndex = asientos.indexOf(undefined);
         if (pasajeroIndex === -1) {
             sessionStorage.setItem(SESSIONSTORAGE_DATOSASIENTOS_KEY, JSON.stringify(asientos));
-            window.location.href = "/extras.html";
+            window.location.href = "extras.html";
         } else {
             $(`#pasajero-${pasajeroIndex}`).addClass("text-danger");
         }

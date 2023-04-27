@@ -8,7 +8,7 @@ let routes = undefined;
 
 const obtenerAeropuertosYRutas = async () => {
     if (airports === undefined) {
-        const d = await fetch("/data/airports.json")
+        const d = await fetch("data/airports.json")
         const data = await d.json();
 
         airports = data.airports;

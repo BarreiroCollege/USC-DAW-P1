@@ -5,7 +5,7 @@ $(document).ready(() => {
     const SESSIONSTORAGE_DATOSEXTRAS_KEY = "PA_DATOSEXTRAS";
     const posiblesDatos = sessionStorage.getItem(SESSIONSTORAGE_DATOSVUELO_KEY);
     if (sessionStorage.getItem(SESSIONSTORAGE_DATOSEXTRAS_KEY) === null) {
-        window.location.replace("/datos.html");
+        window.location.replace("datos.html");
     }
     const datosVuelo = JSON.parse(posiblesDatos);
 

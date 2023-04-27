@@ -7,7 +7,7 @@ $(document).ready(() => {
             .then(v => {
                 const SESSIONSTORAGE_DATOSVUELO_KEY = "PA_DATOSVUELO";
                 sessionStorage.setItem(SESSIONSTORAGE_DATOSVUELO_KEY, JSON.stringify(v));
-                window.location.href = "/reserva.html";
+                window.location.href = "reserva.html";
             });
     });
 });
